@@ -3,8 +3,9 @@ package models
 type Site struct {
 	ID          uint
 	URL         string
-	Title       string
-	Description	string
+	Title       string `sql:"type:CHARACTER SET utf8 COLLATE utf8_general_ci"`
+	Description	string `sql:"type:CHARACTER SET utf8 COLLATE utf8_general_ci"`
 	Thubnail    string
-	Update 		int64
+	Icon 		string
+	Update 		int64 	`gorm:"autoCreateTime"`
 }
